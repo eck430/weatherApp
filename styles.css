@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Zain", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+body{
+    background-image: url('imgs/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.search{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search_box{
+    width: 70vw;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+#search_box, #btn_background, .new_card{
+    border: 1.5px solid black;
+}
+
+#search_box::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    padding: 10px;
+}
+
+#btn_background{
+    position: relative;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#search_btn{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    top: 18%;
+    left: 18%;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+}
+
+.new_card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgba(211, 235, 244, 0.727);
+    width: 80vw;
+}
+
+#add_btn{
+    width: 22px;
+    height: 22px;
+    margin: 15px;
+    align-self: end;
+}
+
+.weather{
+    width: 50vw;
+    height: 100%;
+    align-self: center;
+    margin: 10px;
+}
+
+.city_data{
+    background-color: white;
+    border-radius: 140px 140px 20px 20px;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Enter city name" id="search_box">
+            <div id="btn_background">
+                <img src="imgs/search.png" alt="search" id="search_btn">
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="new_card">
+                <img src="imgs/add.png" alt="add location" id="add_btn">
+                <img src="imgs/sun.png" alt="weather icon" class="weather">
+                <div class="city_data">
+                    <h2 class="city">Honolulu</h2>
+                    <div class="data">
+                        <p class="description">Clear</p>
+                        <p class="feels">30°C</p>
+                        <p class="humidity">50%</p>
+                    </div>
+                    <div>
+                        <div class="sunrise">
+                            <img src="imgs/sunrise.png" alt="sunrise">
+                            <p class="time">06:00</p>
+                        </div>
+                        <h1 class="temp">30°C</h1>
+                        <div class="sunset">
+                            <img src="imgs/sunset.png" alt="sunset">
+                            <p class="time">18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="added_card"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
