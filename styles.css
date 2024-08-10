@@ -68,6 +68,10 @@ body{
     flex-direction: column;
 }
 
+.card{
+    display: none;
+}
+
 .new_card{
     display: flex;
     flex-direction: column;
