@@ -34,7 +34,7 @@ body{
     border-radius: 10px;
 }
 
-#search_box, #btn_background, .new_card{
+#search_box, #search_btn, .new_card{
     border: 1.5px solid black;
 }
 
@@ -45,7 +45,7 @@ body{
     padding: 10px;
 }
 
-#btn_background{
+#search_btn{
     position: relative;
     background-color: white;
     width: 35px;
@@ -54,7 +54,7 @@ body{
     margin-left: 10px;
 }
 
-#search_btn{
+#search_icon{
     position: absolute;
     width: 18px;
     height: 18px;
@@ -72,15 +72,29 @@ body{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: rgba(211, 235, 244, 0.727);
+    background-image: url('imgs/card2.jpg');
+    background-size: cover;
     width: 80vw;
+    margin: 40px auto;
 }
 
-#add_btn{
+.add_btn{
+    position: relative;
+    align-self: end;
+    background-color: white;
+    border-radius: 50%;
+    margin: 15px;
+    width: 32px;
+    height: 32px;
+}
+
+#add_icon{
+    position: absolute;
     width: 22px;
     height: 22px;
-    margin: 15px;
-    align-self: end;
+    align-items: center;
+    top: 15%;
+    left: 15%;
 }
 
 .weather{
@@ -91,11 +105,57 @@ body{
 }
 
 .city_data{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.715);
     border-radius: 140px 140px 20px 20px;
 }
 
-img{
-    width: 50px;
-    height: 50px;
+.city{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 42px;
+}
+
+.data{
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+    font-size: 18px;
+}
+
+.space{
+    border-left: 1.5px solid black;
+    height: 15px;
+    margin: 3px 10px;
+}
+
+#humidity_icon{
+    width: 15px;
+    height: 15px;
+    margin: 3px 3px 0px 0px;
+}
+
+.temp_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0px 35px;
+}
+
+.temp_data img{
+    width: 28px;
+    height: 28px;
+}
+
+.sun_time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp{
+    font-size: 55px;
+    font-weight: 500;
+    margin: 0px 30px;
 }
