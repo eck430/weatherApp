@@ -22,7 +22,7 @@ body{
 }
 
 .search{
-    margin: 30px;
+    margin: 30px 30px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,17 +32,22 @@ body{
     width: 70vw;
     height: 5vh;
     border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-#search_box, #search_btn, .new_card{
+#search_box, #search_btn, .new_card, .addedCard{
     border: 1.5px solid black;
 }
 
 #search_box::placeholder{
-    font-size: 20px;
-    font-weight: 500;
     font-style: italic;
-    padding: 10px;
+}
+
+#search_box:focus{
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
 }
 
 #search_btn{
@@ -63,26 +68,57 @@ body{
     left: 18%;
 }
 
-.cards{
+#search_box:hover, #search_btn:hover{
+    border: 2px solid rgb(40, 61, 95);
+    background-color: rgba(222, 232, 247, 0.896);
+}
+
+.error p{
+    display: none;
+    margin-left: 45px;
+    color: rgb(123, 123, 123);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.allAddedCards{
     display: flex;
-    flex-direction: column;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    margin: 60px 30px;
+    gap: 20px;
 }
 
 .card{
     display: none;
+    margin: 60px 30px;
 }
 
-.new_card{
+.new_card, .addedCard{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-image: url('imgs/card2.jpg');
     background-size: cover;
-    width: 80vw;
-    margin: 40px auto;
+    width: 84vw;
 }
 
-.add_btn{
+.new_card{
+    background-image: url('imgs/card.jpg');
+}
+
+.addedCard{
+    background-image: url('imgs/card2.jpg');
+}
+
+.addedCard{
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    height: 100%;
+}
+
+.add_btn, .delete_btn{
     position: relative;
     align-self: end;
     background-color: white;
@@ -92,7 +128,12 @@ body{
     height: 32px;
 }
 
-#add_icon{
+.add_btn:hover, .delete_btn:hover{
+    border: 1px solid rgb(193, 215, 251);
+    background-color: rgb(172, 200, 249);
+}
+
+#add_icon, #remove_icon{
     position: absolute;
     width: 22px;
     height: 22px;
