@@ -6,7 +6,9 @@ const weatherIcon = document.querySelector(".weather");
 const addBtn = document.querySelector(".add_btn");
 
 searchBtn.addEventListener("click", () => {
-    updateWeather(searchBox.value);
+    updateWeather(searchBox.value).then(()=>{
+        searchBox.value = '';
+    });
 });
 
 addBtn.addEventListener("click", () => {
@@ -33,7 +35,7 @@ async function updateWeather(city) {
     const apiData = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await apiData.json();
 
-    if(apiData.status == 404){
+    if(apiData.status == 404 || apiData.status == 400){
         document.querySelector(".error p").style.display = "block";
         document.querySelector(".card").style.display = "none";
     }
@@ -72,6 +74,7 @@ async function updateWeather(city) {
         document.querySelector(".card").style.display = "block";
         document.querySelector(".allAddedCards").style.display = "none";
         document.querySelector(".error p").style.display = "none";
+        document.querySelector(".welcome").style.display = "none";
     }
 }
 
