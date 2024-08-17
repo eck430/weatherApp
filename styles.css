@@ -115,6 +115,15 @@ body{
     scroll-snap-type: x mandatory;
     margin: 60px 30px;
     gap: 20px;
+    width: 84vw;
+}
+
+.addedCard{
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    background-image: url('imgs/card2.jpg');
+    height: 100%;
 }
 
 .card{
@@ -132,17 +141,6 @@ body{
 
 .new_card{
     background-image: url('imgs/card.jpg');
-}
-
-.addedCard{
-    background-image: url('imgs/card2.jpg');
-}
-
-.addedCard{
-    flex: 0 0 auto;
-    box-sizing: border-box;
-    scroll-snap-align: start;
-    height: 100%;
 }
 
 .add_btn, .delete_btn{
@@ -290,4 +288,4 @@ body{
     .addedCard .weather{
         width: 14vw;
     }
-}
+} 
